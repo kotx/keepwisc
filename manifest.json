@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Keep Wisc.edu Session",
+  "version": "1.0.0",
+  "background": {
+    "scripts": [
+      "browser-polyfill.min.js",
+      "src/background.js"
+    ]
+  },
+  "permissions": [
+    "cookies",
+    "*://*.wisc.edu/*"
+  ]
+}
