@@ -1,9 +1,8 @@
 function onCookieChange({ removed, cookie, cause }) {
   if (!removed && cookie.session) {
     const allowedDomain = "login.wisc.edu";
-    const allowedCookie = "shib_idp_session";
 
-    if (cookie.domain === allowedDomain && cookie.name === allowedCookie) {
+    if (cookie.domain === allowedDomain) {
       const expirationDate = Date.now() + 3.456e11;
       const newCookie = {
         expirationDate,
